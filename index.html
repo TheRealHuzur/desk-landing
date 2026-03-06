@@ -84,6 +84,9 @@
         .page {
             position: relative;
             z-index: 1;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
 
         [data-theme="light"] header {
@@ -107,10 +110,6 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-        }
-
-        [data-theme="light"] .logo-dot {
-            box-shadow: 0 0 6px rgba(10, 125, 148, 0.6);
         }
 
         .card,
@@ -149,31 +148,6 @@
             gap: 0;
             text-decoration: none;
             letter-spacing: -0.01em;
-        }
-
-        .logo-dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: var(--teal);
-            box-shadow: 0 0 8px var(--teal);
-            animation: pulse 2.5s ease-in-out infinite;
-            flex-shrink: 0;
-            margin-right: 10px;
-        }
-
-        @keyframes pulse {
-
-            0%,
-            100% {
-                opacity: 1;
-                box-shadow: 0 0 8px var(--teal);
-            }
-
-            50% {
-                opacity: .5;
-                box-shadow: 0 0 20px var(--teal);
-            }
         }
 
         .header-right {
@@ -235,6 +209,8 @@
         }
 
         main {
+            width: 100%;
+            flex: 1;
             max-width: 960px;
             margin: 0 auto;
             padding: 0 24px 80px;
@@ -316,6 +292,7 @@
         .app-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            grid-auto-rows: 1fr;
             gap: 16px;
             margin-bottom: 56px;
         }
@@ -332,7 +309,8 @@
         .card-clickable {
             cursor: pointer;
             text-decoration: none;
-            display: block;
+            display: flex;
+            flex-direction: column;
             color: inherit;
             transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
         }
@@ -429,7 +407,7 @@
         <header>
             <div class="header-inner">
                 <a href="/" class="logo">
-                    <div class="logo-dot"></div>DESK<span style="color:var(--sky)">suite</span>
+                    DESK<span style="color:var(--sky)">suite</span>
                 </a>
                 <div class="header-right">
                     <div class="theme-toggle" onclick="toggleTheme()">
