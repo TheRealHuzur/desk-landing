@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weiterleitung...</title>
+    <style>
+        body {
+            margin: 0;
+            background: #020617;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            font-family: 'Inter', sans-serif;
+            color: #7a91ab;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>Weiterleitung…</div>
+    <script>
+        // Supabase liefert den Token im URL-Hash nach OAuth
+        // Der `next`-Parameter im Query-String sagt uns, wohin wir weiterleiten sollen
+
+        const params = new URLSearchParams(window.location.search);
+        const next = params.get('next') || 'https://desk-suite.wissen-und-werkzeug.de';
+
+        // Hash mit Access-Token an die Ziel-URL anhängen, damit Supabase ihn dort verarbeiten kann
+        const hash = window.location.hash;
+        window.location.replace(next + (hash || ''));
+    </script>
+</body>
+
+</html>
