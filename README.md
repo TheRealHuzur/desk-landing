@@ -42,7 +42,6 @@ desk-landing/
 Die Seite wird als **Static Site** über [Coolify](https://coolify.io) deployed.  
 Ein manueller Redeploy in Coolify ist nach jedem Push erforderlich.
 
-**Server:** `desk-app-01` · Hetzner Cloud · `23.88.62.226`  
 **Subdomain:** `desk-suite.wissen-und-werkzeug.de` → A-Record auf `23.88.62.226`
 
 ---
@@ -91,6 +90,7 @@ https://[appname].wissen-und-werkzeug.de/**
 | App | URL | Status |
 |---|---|---|
 | GoalDESK | [goaldesk.wissen-und-werkzeug.de](https://goaldesk.wissen-und-werkzeug.de) | ✅ Live |
+| PostDESK | [postdesk.wissen-und-werkzeug.de](https://postdesk.wissen-und-werkzeug.de) | ✅ Live |
 
 ---
 
