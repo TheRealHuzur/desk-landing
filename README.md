@@ -33,7 +33,7 @@ desk-landing/
 - Schrift: Inter (Google Fonts)
 - Design: WUW Design System (Dark/Light Theme)
 - Deployment: Coolify → Static Site
-- SSL: Let's Encrypt via Traefik (automatisch)
+- SSL: Let's Encrypt via Traefik ( automatisch)
 
 ---
 
